@@ -21,3 +21,7 @@ gradle-app.setting
 .classpath
 
 run
+
+www/
+bans.json
+settings.json

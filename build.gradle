@@ -2,8 +2,8 @@ plugins {
     id 'java'
 }
 
-group 'me.ayunami2000.ayunpictojava'
-version '1.0-SNAPSHOT'
+group 'me.telmele.pictochat'
+version '1.0'
 
 repositories {
     mavenCentral()
@@ -18,11 +18,12 @@ dependencies {
     implementation 'net.sourceforge.tess4j:tess4j:5.11.0'
 }
 
+
 jar {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 
     manifest {
-        attributes "Main-Class": "me.ayunami2000.ayunpictojava.Main"
+        attributes "Main-Class": "me.telmele.pictochat.Main"
     }
     from {
         configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }

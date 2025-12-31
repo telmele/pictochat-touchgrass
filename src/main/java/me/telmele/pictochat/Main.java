@@ -1,4 +1,4 @@
-package me.ayunami2000.ayunpictojava;
+package me.telmele.pictochat;
 
 import com.google.gson.*;
 import io.netty.bootstrap.ServerBootstrap;
@@ -704,7 +704,7 @@ public class Main {
 				}).option(ChannelOption.SO_BACKLOG, 128)
 				.childOption(ChannelOption.SO_KEEPALIVE, true);
 
-		System.out.println("Starting ayunpictojava by ayunami2000 on " + host + ":" + port + "!");
+		System.out.println("Starting pictochat touchgrass edition on " + host + ":" + port + "!");
 		ChannelFuture f = b.bind(host, port);
 
 		if (System.console() == null) {
