@@ -380,6 +380,7 @@ loaderFunc = (loader, resources) => {
         });
         pc_sprites.roomScroll = roomScroll;
         app.stage.addChild(pc_sprites.roomScroll);
+        pc_sprites.roomButtons[0].emit('pointerup');
     }
 
     function generateStageButtons() {
@@ -1424,6 +1425,10 @@ loaderFunc = (loader, resources) => {
                         roomIds = obj.ids;
                         generateRoomButtons(obj);
                         scaleStage();
+                        // Automatically join room A
+                        // let joinObj = {type: "cl_joinRoom", id: roomIds[0]};
+                        // websocket.send(JSON.stringify(joinObj));
+                        joinRoom();
                         break;
                     }
                     case "sv_roomData": {
