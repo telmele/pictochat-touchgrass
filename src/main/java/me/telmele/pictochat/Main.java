@@ -1184,7 +1184,7 @@ public class Main {
 					}
 					USERS = getUsersForRoomId(roomId);
 					if (USERS == null) return;
-					if (USERS.size() >= 16) return;
+					// if (USERS.size() >= 16) return;
 					player = ctx.channel().attr(PLAYER_DATA).get();
 					if (USERS.containsKey(player)) return;
 					finalPlayer = player;
