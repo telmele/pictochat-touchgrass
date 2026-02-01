@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  pictochat:
+    build: .
+    ports:
+      - "8090:8090"
+    restart: unless-stopped
+    environment:
+      - PICTOJAVA_SECRET=${PICTOJAVA_SECRET:-}
+      - PICTOJAVA_TRIPCODE_SECRET=${PICTOJAVA_TRIPCODE_SECRET:-}
+    volumes:
+      - ./bans.json:/app/bans.json
+    network_mode: bridge
